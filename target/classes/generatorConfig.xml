@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry location="C:/Users/Joe/.m2/repository\mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" />
+    <context id="context1">
+        <!-- 生成的pojo，将implements Serializable -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8"
+            userId="root" password="123456" />
+            
+        <javaModelGenerator targetPackage="k3wise.mfg.datacloud.domain"
+            targetProject="ssm" />
+        <!-- 配置了自动扫描工具dao和mapper必须放在一个目录 -->
+        <sqlMapGenerator targetPackage="k3wise.mfg.datacloud.mapper"
+            targetProject="ssm"/>
+        <javaClientGenerator targetPackage="k3wise.mfg.datacloud.mapper"
+            targetProject="ssm" type="XMLMAPPER" />
+            
+        <table schema="test" tableName="t_user"
+            enableCountByExample="false" enableUpdateByExample="false"
+            enableDeleteByExample="false" enableSelectByExample="false"
+            selectByExampleQueryId="false" domainObjectName="UserTest"></table>
+    </context>
+</generatorConfiguration>
