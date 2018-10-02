@@ -22,15 +22,15 @@ public class UserTestController {
 	@Autowired
 	UserTestService usertestservice;
 	
-	@RequestMapping("/")
-	@ResponseBody
-	public List<Map<String,Object>> getItemById() throws Exception{
-		log.info("ggggg");
-		String sql="select * from t_user";
-		List<Map<String,Object>> result = usertestservice.getdata(sql);
-		return result;
-	}
-	
+//	@RequestMapping("/")
+//	@ResponseBody
+//	public List<Map<String,Object>> getItemById() throws Exception{
+//		log.info("ggggg");
+//		String sql="select * from t_user";
+//		List<Map<String,Object>> result = usertestservice.getdata(sql);
+//		return result;
+//	}
+//	
 	@RequestMapping("/set/{key}/{value}")
 	@ResponseBody
 	public String setRedis(@PathVariable String key,@PathVariable String value) throws Exception{
