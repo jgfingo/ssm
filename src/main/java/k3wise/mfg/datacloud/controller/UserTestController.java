@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import k3wise.mfg.datacloud.Utils.CacheUtil;
+import k3wise.mfg.datacloud.entities.BaseResult;
 import k3wise.mfg.datacloud.service.UserTestService;
 
 
@@ -30,8 +31,7 @@ public class UserTestController {
 //		List<Map<String,Object>> result = usertestservice.getdata(sql);
 //		return result;
 //	}
-//	
-	@RequestMapping("/set/{key}/{value}")
+//		@RequestMapping("/set/{key}/{value}")
 	@ResponseBody
 	public String setRedis(@PathVariable String key,@PathVariable String value) throws Exception{
 		Boolean boolean1=CacheUtil.setString(key, value);
@@ -40,9 +40,7 @@ public class UserTestController {
 	
 	@RequestMapping("/get/{key}")
 	@ResponseBody
-	public String getRedis(@PathVariable String key) throws Exception{
-		
-		return CacheUtil.getString(key);
+
 	}
 	
 	@RequestMapping("/rs/{key}/{value}")
