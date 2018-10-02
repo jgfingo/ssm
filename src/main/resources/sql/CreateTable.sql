@@ -47,7 +47,7 @@ FItemID INT,-- 物料内码
 FCapcity DECIMAL(23,10) -- 节拍（秒）
 );
 
-
+---其他信息
 
 
 
