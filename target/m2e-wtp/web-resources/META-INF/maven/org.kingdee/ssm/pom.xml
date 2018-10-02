@@ -224,6 +224,11 @@
         </dependency>
         <!-- redis cache related.....end -->
 	  
+	  <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.8.5</version>
+        </dependency>
   </dependencies>
 
 

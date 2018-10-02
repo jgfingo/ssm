@@ -89,15 +89,23 @@
 		</tx:attributes>
 	</tx:advice>
 
+	<bean id="resultAspect" class="k3wise.mfg.datacloud.aop.BindingResultAop" />
 	<!-- 切面 -->
 	<aop:config>
 		<!-- 切点 管理所有Service的方法 -->
 		<aop:pointcut expression="execution(* com.megagao.production.ssm.service.*.*(..))" id="transactionPointCut"/>
 		<!-- 增强，进行事务控制 Advisor -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="transactionPointCut"/>
+		<aop:aspect id="baseControllerAspect" ref="resultAspect">
+            <!-- 配置一个切点 -->
+            <aop:pointcut id="controllerPoint" expression="execution(public * k3wise.mfg.datacloud.controller.*.*(..))" />
+            <!-- 配置环绕通知 -->
+            <aop:around pointcut-ref="controllerPoint" method="around" />
+        </aop:aspect>
+
 	</aop:config>
 
-	<import resource="classpath:spring-redis.xml" />
+	<import resource="classpath:spring/spring-redis.xml" />
 
 
 </beans>
