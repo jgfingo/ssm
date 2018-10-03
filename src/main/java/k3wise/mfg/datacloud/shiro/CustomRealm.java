@@ -29,7 +29,7 @@ public class CustomRealm extends AuthorizingRealm {
 
 	@Autowired
 	private SysService sysService;
-	
+	   
 
 	
 	@Override
