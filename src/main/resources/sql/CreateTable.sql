@@ -6,7 +6,7 @@ FMaxNum INT -- 当前表最大ID
 -- 获取最大值得存储过程
 DROP PROCEDURE IF EXISTS p_GetMaxNum;
 
-DELIMITER $$
+DELIMITER 
 CREATE PROCEDURE p_GetMaxNum(
 IN tablename NVARCHAR(50),
 IN increment INT,
@@ -23,7 +23,7 @@ START TRANSACTION;
 	UPDATE ICMaxNum SET FMaxNum = FMaxNum + increment WHERE FTableName = tablename;
 COMMIT;
 
-END;$$
+END;
 DELIMITER ;
 -- 设备物理表
 CREATE TABLE IF NOT EXISTS  T_Device
@@ -47,7 +47,6 @@ FItemID INT,-- 物料内码
 FCapcity DECIMAL(23,10) -- 节拍（秒）
 );
 
----其他信息
 
 
 

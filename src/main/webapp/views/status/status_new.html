@@ -1,0 +1,122 @@
+﻿<div ng-show="true" id="new_status">
+    <div id="content-body">
+        <div id="left-body">
+            <div id="left-body-top">
+                <div class="box-title">
+                    设备状态统计
+                </div>
+                <div id="left-top-box" class="content-bgColor">
+                    <div ng-repeat="item in statusdata" class="device-status">
+                        <div class="status-detail big-text">{{item.value}}</div>
+                        <div class="status-name">
+                            <div>{{item.tableName}}</div>
+                            <div>(台)</div>
+                        </div>
+                    </div>
+                    <div class="device-status">
+                        <div class="status-detail red-text">{{warnInfo.length}}</div>
+                        <div class="status-name">
+                            <div>今日报警次数</div>
+                            <div>(次)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="left-body-bottom">
+                <div class="box-title">报警信息</div>
+                <div class="content-bgColor fix-height">
+                    <div class="box-header">
+                        <div class="table-header">设备代码</div>
+                        <div class="table-header">报警原因</div>
+                        <div class="table-header">持续时长(分)</div>
+                    </div>
+                    <div class="tip-nodata" ng-show="warnInfo.length==0">没有数据</div>
+                    <table class="bottom-table">
+                        <tr ng-repeat="item in warnInfo" ng-show="checkDevice.indexOf(item.FDeviceID.toString())>-1">
+                            <td class="table-content">{{item.FNumber}}</td>
+                            <td class="table-content">{{item.FReason}}</td>
+                            <td class="table-content">{{(item.FSeconds/60).toFixed(2)}}</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="mid-body">
+            <div class="box-title">设备当前状态</div>
+            <div id="mid-body-content" class="content-bgColor">
+                <div class="mid-body-workshop">
+                    <ul>
+                        <li class="fill-parent" ng-repeat="workshopdata in allData" ng-show="checkWs.indexOf(workshopdata.wsID)>-1">
+                            <div class="workshop">
+                                <div class="workshopname">{{workshopdata.wsname}}</div>
+                                <div class="workshopdetail">
+                                    <div>{{workshopdata.deviceID}}</div>
+                                    <ul>
+                                        <li class="device" ng-repeat="item in workshopdata.devicedata" ng-show="checkDevice.indexOf(item.deviceID)>-1 && (selectstatus.number=='00' || item.status==selectstatus.number) && item.status!=999">
+                                            <div class="content" ng-class="{'02':'img-run','03':'img-pause','04':'img-stop','01':'img-offline'}[item.status]" ng-mouseenter=showmsg(workshopdata.wsID,item.deviceNumber) ng-mouseleave=hidemsg()>
+                                            </div>
+                                            <div class="deviceName">{{item.deviceName.length>4?item.deviceName.substr(0,3)+"...":item.deviceName}}</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="right-body">
+            <div id="right-body-chart">
+                <div class="box-title">状态占比饼图</div>
+                <div id="new-pie" class="content-bgColor">
+
+                </div>
+            </div>
+            <div id="run-rate">
+                <div class="box-title">运行率TOP图</div>
+                <div id="right-body-table" class="content-bgColor">
+
+                    <div class="box-header bottom-border">
+                        <div class="table-header">设备代码</div>
+                        <div class="table-header">设备名称</div>
+                        <div class="table-header">运行率</div>
+                    </div>
+                    <div class="content-bgColor">
+                        <table class="bottom-table">
+                            <tr ng-repeat="item in DeviceRunInfo | orderBy:item.FRunRate" ng-show="checkDevice.indexOf(item.FInterID.toString())>-1 && item.status!=999 ">
+                                <td class="table-content">{{item.FNumber}}</td>
+                                <td class="table-content">{{item.FName}}</td>
+                                <td class="table-content">{{item.FRunRate}}%</td>
+                            </tr>
+                        </table>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="devicedetail" ng-show="isShowTips" style="left:{{tipleft}};top:{{tipTop}}">
+
+    <ul>
+        <li ng-repeat="item in allData|filter:{wsID:selectWsID}">
+            <ul>
+                <li ng-repeat="devicedata in item.devicedata|filter:{deviceNumber:selectDeviceNumber}">
+                    <p>设备编号:{{devicedata.deviceNumber}}</p>
+                    <p>设备名称:{{devicedata.deviceName}}</p>
+                    <p>设备状态:{{devicedata.statusName}}</p>
+                    <p>对应工单:{{devicedata.deviceICMO}}</p>
+                    <p>产品代码:{{devicedata.itemNumber}}</p>
+                    <p>产品名称:{{devicedata.itemName}}</p>
+                    <p>规格型号:{{devicedata.itemModel}}</p>
+                    <p>计划生产数量:{{devicedata.planQty}}</p>
+                    <p>已完成数量:{{devicedata.completeQty}}</p>
+                    <p ng-class="{'-1':'warn-para','1':'warn-para'}[paravalue.FStatus]" ng-repeat="(paraname,paravalue) in devicedata.devicepara">{{paravalue.FCollectTypeName}}:{{paravalue.AvgValue}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>

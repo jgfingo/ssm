@@ -1,0 +1,15 @@
+﻿#device-warn-bar {
+    width: 980px;
+    height: 100%;
+}
+#warn-report-table table,#warn-report-table  td, #warn-report-table  th {
+    
+    border-width: 1px;
+    padding: 10px 10px;
+    border-style: solid;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+#device-report{
+    height:800px;
+}

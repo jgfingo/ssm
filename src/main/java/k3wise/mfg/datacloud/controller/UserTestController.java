@@ -23,29 +23,20 @@ public class UserTestController {
 	@Autowired
 	UserTestService usertestservice;
 	
+//	@RequestMapping("/")
+//	@ResponseBody
+//	public List<Map<String,Object>> getItemById() throws Exception{
+//		log.info("ggggg");
+//		String sql="select * from t_user";
+//		List<Map<String,Object>> result = usertestservice.getdata(sql);
+//		return result;
+//	}
 	@RequestMapping("/")
-	@ResponseBody
-	public BaseResult<Object> getItemById() throws Exception{
-		log.info("ggggg");
-		String sql="select * from t_user";
-		List<Map<String,Object>> result = usertestservice.getdata(sql);
-		return new BaseResult<Object>(true, result);
+	public String setRedis() throws Exception{
+		return "index";
 	}
 	
-	@RequestMapping("/set/{key}/{value}")
-	@ResponseBody
-	public String setRedis(@PathVariable String key,@PathVariable String value) throws Exception{
-		Boolean boolean1=CacheUtil.setString(key, value);
-		return boolean1+"";
-	}
-	
-	@RequestMapping("/get/{key}")
-	@ResponseBody
-	public BaseResult<Object> getRedis(@PathVariable String key) throws Exception{
-		String bString=CacheUtil.getString(key);
-		BaseResult<Object> result=new BaseResult<Object>(true, (Object)bString);
-		return result;
-	}
+
 	
 	@RequestMapping("/rs/{key}/{value}")
 	@ResponseBody

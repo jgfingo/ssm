@@ -1,0 +1,133 @@
+﻿
+.right-body-workshop{
+    overflow:hidden;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+h2{
+    width:70%;
+    text-align:center;
+    padding:8px;
+}
+.right-body-workshop ul, li {
+    list-style: none;
+}
+.tip-header span:nth-child(1){
+    float:left;
+
+}
+.tip-header span:nth-child(2){
+    float:right;
+}
+
+.right-body-workshop li {
+    float: left;
+}
+
+.workshop {
+    width: 100%;
+    height: 100%;
+    border: solid 1px #D5DDE5;
+    overflow:hidden;
+}
+.workshopname{
+    vertical-align:middle;
+    width:20%;
+    height:100%;
+    float:left;
+    text-align:center;
+    line-height:50px;
+    color:#999999;
+    font-size:20px;
+}
+.workshopdetail{
+    width:80%;
+    float:left;
+}
+.device {
+    width: 80px;
+    height: 120px;
+    padding: 2px 5px;
+    overflow:hidden;
+}
+
+.img-run {
+    background-image: url('../../img/0.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-stop {
+    background-image: url('../../img/2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-pause {
+    background-image: url('../../img/1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img-offline{
+    background-image: url('../../img/4.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.content {
+    width: 80px;
+    height: 80px;
+    margin:0 3px;
+}
+
+.fill-parent {
+    width: 100%;
+}
+
+.deviceName {
+    text-align: center;
+    color:#fff;
+    font-size:16px;
+}
+.right-body-header{
+    height:75px;
+    width:800px;
+    padding:10px 10px;
+    border-bottom:dotted 2px blue
+}
+.right-body-chart {
+    margin:10px;
+    width:100%;
+    height: 40%;
+}
+
+#right-body-table {
+    width: 25%;
+    height: 180px;
+    float: left;
+    padding-top:20px;
+}
+
+#right-body-pie {
+    width: 60%;
+    height: 100%;
+    float: left;
+    overflow:visible;
+}
+#devicedetail{
+    padding:2px 15px;
+    position:fixed;
+    letter-spacing:0.1em;
+    font-size:16px;
+	background-color:rgba(0,0,0,0.7);
+    color:#fff
+}
+#right-body-table table,#right-body-table  td, #right-body-table  th {
+    border-width: 1px;
+    padding: 8px 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+
+ 

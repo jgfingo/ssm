@@ -1,0 +1,41 @@
+﻿<div class="dashboard-page">
+    <nav class="main-menu">
+        <ul>
+            <li style="height: 80px;margin-top: 20px;font-size: 18px;color: white">
+                <div>
+                    <i style="position:relative;display: table-cell;width: 60px;text-align:center;vertical-align:middle;font-size:18px;padding:.7em 0;">
+                        <img src="views/main/img/timg.jpg" height="30" width="30" style=" border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;">
+                    </i>
+                    <span class="nav-text">
+                        切换账套
+					</span>
+                </div>
+            </li>
+            <li class="has-subnav" ng-repeat="item in functioninfo">
+                <a >
+                    <i style="position:relative;display: table-cell;width: 60px;text-align:center;vertical-align:middle;font-size:18px;padding:.7em 0;">
+                        <img ng-src="{{item.menupic}}" height="30" width="30" >
+                    </i>
+
+                    <span class="nav-text" ng-bind="item.menuname">
+					</span>
+                    <i class="icon-angle-right"></i><i class="icon-angle-down"></i>
+                </a>
+                <ul>
+                    <li ng-repeat="sub in item.sub">
+                        <a class="subnav-text" ng-click="go(sub)" ng-bind="sub.subname">
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+    <section class="wrapper scrollable">
+        <div ui-view style="width:100%"></div>
+    </section>
+</div>
+
+
