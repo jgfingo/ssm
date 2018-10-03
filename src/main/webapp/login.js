@@ -27,11 +27,27 @@ htmlObj.login = function(){
 		},
         dataType: "json",
         success: function (data) {
-            if (data.msg) {
-
+        	if (data.msg == 'account_error') {
+        		 htmlObj.showMsg("txtuser", "用户不存在！", 175, -162, 1);
+                 return;
+			} else if (data.msg == 'password_error') {
+				 htmlObj.showMsg("txtuserp", "密码错误！", 243, -95, 1);
+	             return;
+			}  else if (data.msg == 'authentication_error') {
+				htmlObj.showMsg("txtuser", "您没有授权！", 175, -162, 1);
+                return;
+			} else {
+				 window.location.href = "main.html";
+			}
+            if (data.msg === 0) {
+               
             }
-            else {
+            if (data.msg == 2) {
+               
+            }
+            if (data.msg == 1) {
 
+               
             }
         },
 		error : function(e) {

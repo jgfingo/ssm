@@ -45,14 +45,13 @@ public class LoginController {
 	public Map<String,Object> userLogin(@RequestParam String username,@RequestParam String password) throws Exception{
 	    
 		Map<String,Object> map = CollectionsFactory.newHashMap();
-
 		Subject currentUser = SecurityUtils.getSubject();
 	    if (!currentUser.isAuthenticated()) {
 	    	UsernamePasswordToken token = new UsernamePasswordToken(username, password);
 	        try{
 	            currentUser.login(token);
 	        }catch(UnknownAccountException ex){
-	        	map.put("msg", "account_error");
+	        	map.put("msg", "");
 	        }catch(IncorrectCredentialsException ex){
 	        	map.put("msg", "password_error");
 	        }catch(AuthenticationException ex){
