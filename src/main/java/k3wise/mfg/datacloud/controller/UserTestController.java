@@ -38,10 +38,7 @@ public class UserTestController {
 		return boolean1+"";
 	}
 	
-	@RequestMapping("/get/{key}")
-	@ResponseBody
 
-	}
 	
 	@RequestMapping("/rs/{key}/{value}")
 	@ResponseBody
