@@ -10,7 +10,7 @@
     <!-- 使用spring组件扫描@service  -->
 	<context:component-scan base-package="k3wise.mfg.datacloud.*"/>
     <!-- 自定义域realm -->
-    <bean id="customRealm" class="k3wise.mfg.datacloud.controller.shiro.CustomRealm"></bean>
+    <bean id="customRealm" class="k3wise.mfg.datacloud.shiro.CustomRealm"></bean>
     <!-- 安全管理器  ref对象-->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="customRealm"/>
