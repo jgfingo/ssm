@@ -1,0 +1,21 @@
+﻿#content-right-submenu ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#content-right-menu li, #content-right-submenu li {
+    text-decoration: none; /*去掉前面的圆点*/
+    float: left;
+    list-style-type: none;
+}
+
+#content-right-menu ul li a, #content-right-submenu ul li a {
+    display: block;
+    padding: 10px;
+    width: 150px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}

@@ -31,11 +31,9 @@ public class UserTestController {
 //		List<Map<String,Object>> result = usertestservice.getdata(sql);
 //		return result;
 //	}
-//		@RequestMapping("/set/{key}/{value}")
-	@ResponseBody
-	public String setRedis(@PathVariable String key,@PathVariable String value) throws Exception{
-		Boolean boolean1=CacheUtil.setString(key, value);
-		return boolean1+"";
+	@RequestMapping("/")
+	public String setRedis() throws Exception{
+		return "index";
 	}
 	
 

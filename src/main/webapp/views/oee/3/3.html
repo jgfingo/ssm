@@ -1,0 +1,24 @@
+﻿<div id="device-report">
+    <div class="chart">
+        <div id="device-warn-bar"></div>
+    </div>
+    <div id="warn-report-table">
+        <table>
+            <tr>
+                <th ng-repeat="item in maindata[0].colname">{{item}}</th>
+            </tr>
+            <tr ng-repeat="item in maindata[0].rowdata" ng-class="{true:'high-light',false:''}[item.FTotal==1]" ng-show="item.FTotal==0">
+                <td>{{item.FWSName}}</td>
+                <td>{{item.FNumber}}</td>
+                <td>{{item.FName}}</td>
+                <td>{{item.FCause}}</td>
+                <td>{{item.FLogTime}}</td>
+                <td>{{item.FEndTime}}</td>
+                <td>{{(item.FSeconds/60).toFixed(2)}}</td>
+                <td>{{item.FIsSovled==1?"已解决":(item.FIsSovled==2?"":"未解决")}}</td>
+            </tr>
+        </table>
+        <div class='tip-nodata' ng-show="maindata[0].rowdata.length==0">没有数据</div>
+    </div>
+
+</div>

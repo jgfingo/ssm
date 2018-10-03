@@ -1,0 +1,35 @@
+﻿<div class="oee-content">
+
+    <div class="chart">
+        <div id="device-oee-bar"  ng-show="showtype==1"></div>
+        <div id="oee-gauge-devicename" ng-show="showtype==0">设备-{{showdata[0].FDeviceName.slice(0,showdata[0].FDeviceName.length-4)}}</div>
+        <div class="gauge" id="device-oee-gauge-oee" ng-show="showtype==0"></div>
+        <div class="gauge" id="device-oee-gauge-time" ng-show="showtype==0"></div>
+        <div class="gauge" id="device-oee-gauge-performance" ng-show="showtype==0"></div>
+        <div class="gauge" id="device-oee-gauge-quality" ng-show="showtype==0"></div>
+    </div>
+    <div id="oee-table">
+        <table>
+            <tr >
+                <th ng-repeat="item in colheadData"  ng-class="{true:'selectedCol',false:''}[selectHeadName==item && item.canBeChoose==1]" ng-click="selecteCol(item)">{{item.name}}</th>
+                
+            </tr>
+            <tr ng-repeat="item in alldata" ng-class="{true:'high-light',false:''}[item.FTotal>=1]" ng-show="item.FTotal==0 || item.FTotal >1">
+                <td>{{item.FWSName}}</td>
+                <td>{{item.FDeviceNumber}}</td>
+                <td>{{item.FDeviceName}}</td>
+                <td>{{item.FDate}}</td>
+                <td>{{item.FLoadTime}}</td>
+                <td>{{item.FWorkTime}}</td>
+                <td >{{item.FTimeActivation==-999?'--':item.FTimeActivation}}</td>
+                <td >{{item.FQty}}</td>
+                <td >{{item.FBeat}}</td>
+                <td >{{item.FPerformanceActivation==-999?'--':item.FPerformanceActivation }}</td>
+                <td >{{item.FPassQty}}</td>
+                <td >{{item.FPassRate}}</td>
+                <td >{{item.FOee==-999?'--':item.FOee }}</td>
+            </tr>
+        </table>
+        <div class='tip-nodata' ng-show="alldata.length==0">没有数据</div>
+    </div>
+</div>

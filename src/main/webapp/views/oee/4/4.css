@@ -1,0 +1,11 @@
+﻿#device-para {
+    width:100%;
+    height:90%;
+    overflow:auto;
+}
+.device-para-chart {
+    padding-left:20px;
+    width:400px;
+    height:300px;
+    float:left;
+}

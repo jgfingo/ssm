@@ -1,0 +1,247 @@
+﻿.login-page {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+}
+
+.login-container {
+  margin: 3% auto;
+  width: 100%;
+  height: 50vh;
+}
+
+.newlogin {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 45%;
+  background: white;
+  border-radius: 3px;
+  border: 3px solid #4c8af9;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.newlogin:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: #4c8af9;
+  border-radius: 4px;
+}
+.newlogin h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow:#f3f3f3 1px 1px 0px, #b2b2b2 1px 2px 0;
+  background: #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+
+}
+.newlogin p {
+  margin: 20px 0 0;
+}
+.newlogin p:first-child {
+  margin-top: 0;
+}
+.newlogin input[type=text], .newlogin input[type=password] {
+  width: 95%;
+}
+.newlogin p.remember_me {
+  float: left;
+  line-height: 31px;
+}
+.newlogin p.remember_me label {
+  font-size: 18px;
+  color: #777;
+  cursor: pointer;
+}
+.newlogin p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.newlogin p.submit {
+  text-align: right;
+}
+.selectContainer{
+  margin: 5px;
+  padding: 0 10px;
+  width:95%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 23px;
+  height: 40px;
+  color: #404040;
+  background: #eff4f7;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.accountselect{
+
+  background: #eee;
+  float: left;
+  position: absolute;
+  width:60%;
+  height:100%;
+  border: 1px solid #666666;
+  left: 20%;
+  overflow: auto;
+  z-index: 1008;
+}
+.accountOption{
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  font-size:28px;
+  color:#161617;
+  border-bottom:1px solid #666666;
+  overflow: hidden; /* �����Ĳ����������� */
+  white-space: nowrap;/* ����ʾ�ĵط���ʡ�Ժ�...���� */
+  text-overflow: ellipsis;/* ֧�� IE */
+  -o-text-overflow: ellipsis;/* ֧�� Opera */
+}
+.accountOption:active{
+  background: whitesmoke;
+}
+.accountOption:hover{
+  background: whitesmoke;
+}
+
+p input[type=text],p input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 40px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+p input[type=text]:focus,p input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+p input[type=submit] {
+  padding: 0 10%;
+  height: 30px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+p input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.KD4Container{
+  position:relative;
+  margin: 0 auto;
+  /*width:990px;
+  height:734px;*/
+  width:100%;
+  height:100%;
+}
+.KD4Banner1
+{
+  position:relative;
+  background-color:#375C90;
+  white-space:nowrap;
+  word-break:break-all;
+  /*height:160px;*/
+  height:168px;
+  width:100%;
+  margin:0px auto;
+}
+.KD4Logo{
+  position:absolute;
+  top:20px;
+  left:20px;
+}
+.KD4ConfigIcon{
+  width:76px;
+  height:76px;
+  position:absolute;
+  top:21px;
+  right:91px;
+  background-image:url(../img/shezhi-.png);
+  background-position:center;
+  background-repeat:no-repeat;
+  cursor:pointer;
+}
+.KD4ShutDownIcon{
+  width:76px;
+  height:76px;
+  position:absolute;
+  top:21px;
+  right:15px;
+  background-image:url(../img/tuichu-.png);
+  background-position:center;
+  background-repeat:no-repeat;
+  cursor:pointer;
+}
+
+.bannerText{
+  position:absolute;
+  width:100%;
+  top:45px;
+  color:#FFFFFF;
+  font-size:30px;
+  line-height:30px;
+  font-weight:bolder;
+  font-family: "Microsoft YaHei";
+  text-align:center;
+}
+.bannerSubText{
+  position:absolute;
+  width:100%;
+  /*bottom:50px;*/
+  bottom:58px;
+  color:#DDDDDD;
+  font-size:20px;
+  line-height:20px;
+  font-family: "Microsoft YaHei";
+  text-align:center;
+}

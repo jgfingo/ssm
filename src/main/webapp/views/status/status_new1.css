@@ -1,0 +1,253 @@
+﻿#new_status {
+    width: 100%;
+    height: 88vh;
+    background-color: #efeeee;
+}
+
+#content-body {
+    
+    width: 100%;
+    height: 100%;
+}
+
+#left-body {
+    width: 20%;
+    margin-left: 0.5%;
+    margin-top: 0.5%;
+    float: left;
+    height: 98%;
+}
+#left-body-top{
+    width:100%;
+}
+#left-top-box
+{
+    width:100%;
+    height:80%;
+}
+#left-body-bottom{
+    width:100%;
+    height:100%;
+    margin-top:4%;
+}
+#run-rate
+{
+    margin-top:4%;
+}
+#mid-body {
+    width: 53%;
+    margin-left: 0.5%;
+    margin-top: 0.5%;
+    float: left;
+    height: 99%;
+    overflow:auto;
+}
+
+#right-body {
+    width: 22%;
+    margin-left:0.5%;
+    margin-top: 0.5%;
+    float: left;
+    height: 98%;
+}
+.table-header{
+    float:left;
+    width:32%;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 14px;
+    padding:5px;
+}
+.bottom-table{
+    width:100%;
+
+}
+.status-name{
+    width:50%;
+    float:left;
+    text-align:left;
+    font-size:16px;
+    padding:1vh 0px 1vh 2vh;
+}
+.status-detail{
+    width:30%;
+    float:left;
+    text-align:right;
+    padding:5px 15px;
+}
+.device-status{
+    width:100%;
+    /*height:80px;*/
+    overflow:hidden;
+    /*padding:15px 0;*/
+}
+.table-content{
+    width:33%;
+    text-align:left;
+    font-size:14px;
+    padding:5px;
+}
+.box-title {
+    background-color: #F8F9FB;
+    height:40px;
+    line-height:40px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    padding-left:10px;
+    letter-spacing: 0;
+}
+
+.box-header {
+    
+}
+.fix-height{
+    overflow:auto;
+    padding:2px 5px;
+}
+.big-text {
+    font-family: PingFangSC-Light;
+    font-size: 6vh;
+    color: #365C8F;
+    letter-spacing: 0;
+    line-height: 6vh;
+}
+.red-text {
+    font-family: PingFangSC-Light;
+    font-size: 6vh;
+    color: #FF4E4E;
+    letter-spacing: 0;
+    line-height: 6vh;
+}
+tr:nth-child(even){
+    background-color:  #F8F9FB;
+}
+tr:nth-child(odd)>td{
+    background-color: #ffffff;
+}
+.status-text {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0;
+}
+
+.content-bgColor {
+    background-color: #ffffff;
+}
+
+.title-color {
+    background-color: #F8F9FB;
+}
+#mid-body-content{
+    height:100%;
+    width:100%;
+    overflow:auto;
+    display:table;
+}
+.fill-parent {
+    width: 100%;
+}
+.workshop {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+.workshopname{
+    width:100%;
+    height:15%;
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.workshopdetail{
+    width:100%;
+    height:85%;
+    margin-left:20px;
+}
+
+.device {
+    width: 90px;
+    height: 120px;
+    padding: 2px 5px;
+    overflow:hidden;
+}
+.content {
+    width: 80px;
+    height: 80px;
+    margin:0 3px;
+}
+.deviceName {
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+.img-run {
+    background-image: url('../../img/0.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-stop {
+    background-image: url('../../img/2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-pause {
+    background-image: url('../../img/1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img-offline{
+    background-image: url('../../img/3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.mid-body-workshop{
+
+    overflow:hidden;
+    display: table-cell;
+    vertical-align: middle;
+    padding:5px 10px;
+
+}
+.mid-body-workshop li {
+    float: left;
+}
+#devicedetail{
+    padding:2px 15px;
+    position:fixed;
+    letter-spacing:0.1em;
+    font-size:16px;
+	background-color:rgba(0,0,0,0.7);
+    color:#fff
+}
+.warn-para{
+    color:#e6b502
+}
+#right-body-chart{
+    width:100%;
+    height:40%;
+}
+#run-rate{
+    width:100%;
+    height:59%;
+    margin-top:1%;
+}
+#new-pie{
+    width:100%;
+    height:90%;
+}
+#right-body-table
+{
+    height:95%
+}

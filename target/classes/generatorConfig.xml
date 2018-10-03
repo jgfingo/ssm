@@ -10,7 +10,7 @@
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8"
+            connectionURL="jdbc:mysql://127.0.0.1:3306/k3wise_db?characterEncoding=utf8"
             userId="root" password="123456" />
             
         <javaModelGenerator targetPackage="k3wise.mfg.datacloud.domain"
@@ -21,9 +21,9 @@
         <javaClientGenerator targetPackage="k3wise.mfg.datacloud.mapper"
             targetProject="ssm" type="XMLMAPPER" />
             
-        <table schema="test" tableName="t_user"
+            <table schema="k3wise_db" tableName="sys_user"
             enableCountByExample="false" enableUpdateByExample="false"
             enableDeleteByExample="false" enableSelectByExample="false"
-            selectByExampleQueryId="false" domainObjectName="UserTest"></table>
+            selectByExampleQueryId="false" domainObjectName="sysuser"></table>
     </context>
 </generatorConfiguration>

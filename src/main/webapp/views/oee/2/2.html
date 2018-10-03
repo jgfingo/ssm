@@ -1,0 +1,21 @@
+﻿<div id="device-distribute">
+
+
+    <div id="device-distribute-bar"></div>
+    <div id="device-distribute-table">
+        <table>
+            <tr>
+                <th ng-repeat="item in maindata[0].colname">{{item}}</th>
+            </tr>
+            <tr ng-repeat="item in showdata" ng-class="{true:'high-light',false:''}[item.FTotal>1]" ng-show="item.FTotal>1 ||item.FTotal==0">
+                <td>{{item.wsName}}</td>
+                <td>{{item.deviceNumber}}</td>
+                <td>{{item.deviceName}}</td>
+                <td>{{item.date}}</td>
+                <td ng-repeat="status in item.status">{{status.value}}</td>
+            </tr>
+        </table>
+        <div class='tip-nodata' ng-show="maindata[0].rowdata.length==0">没有数据</div>
+    </div>
+   
+</div>
